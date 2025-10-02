@@ -15,8 +15,9 @@ jobs:
         run: mvn test
 
        
-      - name: checkstyle
-        uses: mvn checkstyle:checkstyle
+      - name: Checkstyle
+        run: mvn checkstyle:checkstyle
+
   
   #setup java 11 to be deployed (sonar-scanner requirement as of 5.x)
 
