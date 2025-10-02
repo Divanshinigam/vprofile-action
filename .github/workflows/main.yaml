@@ -95,7 +95,7 @@ jobs:
          aws-region: ${{ env.AWS_REGION }}
 
       - name: Get kubeconfig file
-        run: aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER }} --region ${{ env.AWS_REGION }}
+        run: aws eks update-kubeconfig  --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
 
       - name: print kubeconfig
         run: cat ~/.kube/config
@@ -115,4 +115,3 @@ jobs:
           namespace: default
           values: appimage=${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }},apptag=${{ github.run_number }}
           name: vprofile-stack
-          
