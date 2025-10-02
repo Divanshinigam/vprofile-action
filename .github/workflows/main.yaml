@@ -59,7 +59,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
           
  # docker Build and publish
-  Build_and_publish:
+  BUILD_AND_PUBLISH:
     needs: testing
     runs-on: ubuntu-latest
     steps:
