@@ -44,10 +44,11 @@ jobs:
            -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
            -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/
 
-  #check the quality gate status
-      - name: SonarQube Quality Gate Check
-        id: sonar_quality_gate_check
-        uses: soanarsource/sonar-quality-gate-action@master
+  # Check the Quality Gate status.
+      - name: SonarQube Quality Gate check
+        id: sonarqube-quality-gate-check
+        uses: sonarsource/sonarqube-quality-gate-action@master
+
        
 
   # force to fail step after  specific time 
